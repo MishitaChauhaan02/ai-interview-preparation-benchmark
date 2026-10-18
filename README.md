@@ -2,7 +2,7 @@
 
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![OpenAI API](https://img.shields.io/badge/OpenAI-API-green.svg)](https://platform.openai.com/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 
 A rigorous empirical benchmarking framework and engineering minor project comparing Large Language Models (`gpt-4o-mini`, `gpt-4.1-mini`, `gpt-4.1`, etc.) on evaluating candidate technical interview answers across multi-dimensional criteria (Clarity, Relevance, Structure, and Confidence), providing actionable coaching feedback, and proposing interview-ready sample answers.
 
