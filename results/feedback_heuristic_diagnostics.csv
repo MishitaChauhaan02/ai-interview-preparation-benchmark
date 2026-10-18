@@ -1,0 +1,4 @@
+model,prompt_approach,avg_fb_words,avg_improved_answer_words,avg_actionable_cues,avg_actionable_density_pct
+gpt-4.1,rubric,83.8,118.6,2.8,3.38
+gpt-4.1-mini,rubric,106.0,106.2,2.4,2.26
+gpt-4o-mini,rubric,80.6,108.4,1.6,1.93

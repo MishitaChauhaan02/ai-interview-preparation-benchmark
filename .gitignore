@@ -1,0 +1,32 @@
+# Environment and Secrets
+.env
+*.env
+!.env.example
+
+# Virtual Environments
+.venv/
+venv/
+env/
+ENV/
+
+# Python Cache and Bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.mypy_cache/
+
+# OS-generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Results and data cache (optional: keep directory, ignore large artifacts if needed)
+# Uncomment the following line if you do not want to track result CSVs/PNGs in git:
+# results/*.csv
+# results/*.png

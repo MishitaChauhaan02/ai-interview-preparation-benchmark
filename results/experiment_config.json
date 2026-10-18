@@ -1,0 +1,24 @@
+{
+  "timestamp": "2026-10-15T15:38:02.027310+00:00",
+  "stage": "Stage A — Pilot Experiment",
+  "sample_size": 5,
+  "models": [
+    "gpt-4o-mini",
+    "gpt-4.1-mini",
+    "gpt-4.1"
+  ],
+  "prompt_approaches": [
+    "rubric"
+  ],
+  "temperature": 0.0,
+  "seed": 42,
+  "dataset_metadata": {
+    "loaded_from": "/Users/mishitachauhan/ai-interview-preparation/data/interview_dataset.json",
+    "dataset_name": "AI Interview Prep - Sample Training Data",
+    "version": "0.2 (sample, 33 records)",
+    "description": "Each record = one interview question + a candidate's answer + the feedback an AI coach should give + scores. Used to teach an LLM how to evaluate answers and give real-time feedback.",
+    "score_scale": "1 (poor) to 5 (excellent)",
+    "total_records": 33
+  },
+  "deterministic_disclaimer": "Deterministic settings (temperature=0.0, seed=42) minimize output variance but do not guarantee bit-level identity across OpenAI server clusters."
+}

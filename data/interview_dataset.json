@@ -1,0 +1,596 @@
+{
+  "dataset_name": "AI Interview Prep - Sample Training Data",
+  "version": "0.2 (sample, 33 records)",
+  "description": "Each record = one interview question + a candidate's answer + the feedback an AI coach should give + scores. Used to teach an LLM how to evaluate answers and give real-time feedback.",
+  "score_scale": "1 (poor) to 5 (excellent)",
+  "records": [
+    {
+      "id": 1,
+      "role": "Software Engineer",
+      "category": "Behavioral",
+      "difficulty": "easy",
+      "question": "Tell me about yourself.",
+      "candidate_answer": "Um, I am a fresher, I did my B.Tech and I like coding. I know Java and some Python. I want a job in a good company.",
+      "answer_quality": "weak",
+      "feedback": "Your answer is too short and generic. Avoid fillers like 'um'. Structure it as: present (who you are now), past (key projects or skills), future (why this role). Mention one concrete project or achievement.",
+      "scores": {
+        "clarity": 2,
+        "relevance": 2,
+        "structure": 1,
+        "confidence": 2
+      },
+      "improved_answer": "I'm a recent B.Tech graduate in Computer Science with hands-on experience in Java and Python. In my final-year project, I built a student attendance system using Spring Boot that reduced manual entry time by about 60%. I'm now looking for a software engineer role where I can build reliable backend systems and keep learning from experienced teams, which is exactly what this role offers."
+    },
+    {
+      "id": 2,
+      "role": "Software Engineer",
+      "category": "Behavioral",
+      "difficulty": "medium",
+      "question": "Describe a time you faced a difficult challenge in a team project and how you handled it.",
+      "candidate_answer": "In my college project, our teammate left midway and we were short on time. I took charge, divided his remaining work among the three of us, set daily check-ins, and handled the database module myself. We submitted on time and got an A grade.",
+      "answer_quality": "strong",
+      "feedback": "Good use of the STAR method (Situation, Task, Action, Result). Clear ownership and a measurable outcome. To improve, add one specific learning or what you would do differently.",
+      "scores": {
+        "clarity": 4,
+        "relevance": 5,
+        "structure": 5,
+        "confidence": 4
+      },
+      "improved_answer": "Same answer, plus: 'The biggest lesson was to set up task tracking from day one, so that a single dropout never puts the project at risk.'"
+    },
+    {
+      "id": 3,
+      "role": "Software Engineer",
+      "category": "Technical",
+      "difficulty": "easy",
+      "question": "What is the difference between an array and a linked list?",
+      "candidate_answer": "Array is fixed size and stored in continuous memory so we can access any element by index quickly in O(1). Linked list stores nodes with pointers, so insertion and deletion are easy, but access takes O(n) because we must traverse.",
+      "answer_quality": "strong",
+      "feedback": "Accurate and concise. You covered memory layout, access time and insertion trade-offs. Bonus: mention that dynamic arrays can resize, and when you would choose each one in practice.",
+      "scores": {
+        "clarity": 5,
+        "relevance": 5,
+        "structure": 4,
+        "confidence": 4
+      },
+      "improved_answer": "Add: 'In practice I'd use an array or dynamic array when I need fast random access, and a linked list when I frequently insert or delete in the middle and don't need indexing.'"
+    },
+    {
+      "id": 4,
+      "role": "Software Engineer",
+      "category": "Technical",
+      "difficulty": "medium",
+      "question": "What is REST API and how is it different from SOAP?",
+      "candidate_answer": "REST is something used for web services. SOAP is also used for web services. REST is better and newer.",
+      "answer_quality": "weak",
+      "feedback": "This answer is vague and doesn't explain either concept. Define REST (stateless, resource-based, uses HTTP methods like GET/POST/PUT/DELETE, usually JSON). Define SOAP (protocol with strict XML messaging). Then compare: flexibility, speed, standards, and use cases. Avoid claiming one is simply 'better'.",
+      "scores": {
+        "clarity": 1,
+        "relevance": 2,
+        "structure": 1,
+        "confidence": 2
+      },
+      "improved_answer": "REST is an architectural style where resources are accessed through URLs using standard HTTP methods, and it is stateless, usually returning JSON. SOAP is a strict protocol that uses XML envelopes and has built-in standards for security and transactions. REST is lighter and faster, so it's common for web and mobile apps, while SOAP is still used in banking and enterprise systems that need strict contracts."
+    },
+    {
+      "id": 5,
+      "role": "Any",
+      "category": "HR",
+      "difficulty": "easy",
+      "question": "What are your strengths and weaknesses?",
+      "candidate_answer": "My strength is I am hardworking. My weakness is that I work too hard and I am a perfectionist.",
+      "answer_quality": "weak",
+      "feedback": "Interviewers hear 'I work too hard' and 'perfectionist' very often, and it sounds rehearsed. Pick a real strength and back it with an example. For weakness, name a genuine, non-critical one and show what you are doing to improve it.",
+      "scores": {
+        "clarity": 3,
+        "relevance": 3,
+        "structure": 2,
+        "confidence": 3
+      },
+      "improved_answer": "My strength is learning quickly. For example, I picked up React in two weeks to finish a hackathon project. One weakness is that I used to hesitate to ask for help, which slowed me down. Now I set a rule to ask after 30 minutes of being stuck, and it has made me much faster."
+    },
+    {
+      "id": 6,
+      "role": "Any",
+      "category": "HR",
+      "difficulty": "medium",
+      "question": "Why do you want to leave your current job?",
+      "candidate_answer": "My manager is very bad and the pay is low. Nobody appreciates my work there.",
+      "answer_quality": "weak",
+      "feedback": "Never speak negatively about your current employer or manager, even if it's true. It signals poor professionalism. Reframe around growth, learning and what attracts you to the new role.",
+      "scores": {
+        "clarity": 3,
+        "relevance": 2,
+        "structure": 2,
+        "confidence": 3
+      },
+      "improved_answer": "I've learned a lot in my current role, but I feel I've reached a point where growth opportunities are limited. I'm looking for a role with larger-scale projects and more ownership, and this position fits that goal well."
+    },
+    {
+      "id": 7,
+      "role": "Any",
+      "category": "Situational",
+      "difficulty": "medium",
+      "question": "What would you do if you disagreed with your manager's decision?",
+      "candidate_answer": "I would first try to understand their reasoning. If I still disagreed, I would share my view privately with data or examples, and listen to their response. If they still decide differently, I would support the decision and do my best, since they may have context I don't.",
+      "answer_quality": "strong",
+      "feedback": "Mature, balanced answer. You show respect, use evidence, and know when to commit. Adding a brief real example would make it even more convincing.",
+      "scores": {
+        "clarity": 5,
+        "relevance": 5,
+        "structure": 4,
+        "confidence": 4
+      },
+      "improved_answer": "Same answer, ending with a short real example, e.g., 'In my internship I suggested a different testing approach, my lead chose otherwise, and I supported it. Later we adopted part of my idea.'"
+    },
+    {
+      "id": 8,
+      "role": "Data Analyst",
+      "category": "Technical",
+      "difficulty": "medium",
+      "question": "What is the difference between INNER JOIN and LEFT JOIN in SQL?",
+      "candidate_answer": "INNER JOIN returns only the rows that have matching values in both tables. LEFT JOIN returns all rows from the left table and the matching rows from the right table; if there is no match, the right side columns are NULL.",
+      "answer_quality": "strong",
+      "feedback": "Correct and clearly explained. Strengthen it with a quick example, such as customers and orders, to show you can apply it.",
+      "scores": {
+        "clarity": 5,
+        "relevance": 5,
+        "structure": 4,
+        "confidence": 4
+      },
+      "improved_answer": "Add: 'For example, a LEFT JOIN from customers to orders shows all customers, including those who never ordered, whereas an INNER JOIN shows only customers who have placed orders.'"
+    },
+    {
+      "id": 9,
+      "role": "Data Analyst",
+      "category": "Technical",
+      "difficulty": "medium",
+      "question": "How do you handle missing values in a dataset?",
+      "candidate_answer": "I just delete all the rows which have missing values.",
+      "answer_quality": "weak",
+      "feedback": "Deleting everything can discard valuable data and bias results. First check how much is missing and why. Then choose a method: drop (if very few), impute with mean/median/mode, use forward fill for time series, or use model-based imputation. Always document what you did.",
+      "scores": {
+        "clarity": 3,
+        "relevance": 2,
+        "structure": 2,
+        "confidence": 3
+      },
+      "improved_answer": "First I check the percentage and pattern of missing data. If it's tiny and random, I may drop those rows. Otherwise I impute: median for skewed numeric data, mode for categories, or forward fill for time series. I also add a flag column where missingness itself might be informative, and I record my choices."
+    },
+    {
+      "id": 10,
+      "role": "Marketing Executive",
+      "category": "Behavioral",
+      "difficulty": "medium",
+      "question": "Tell me about a campaign you are proud of.",
+      "candidate_answer": "I ran an Instagram campaign for a college fest. We posted reels and stories for three weeks, collaborated with 5 student influencers, and ticket sales increased by 40% compared to last year. I tracked reach and engagement weekly and shifted budget toward the best-performing reels.",
+      "answer_quality": "strong",
+      "feedback": "Great use of numbers and a clear action-to-result link. Mention the budget and your exact personal role so the interviewer knows your individual contribution.",
+      "scores": {
+        "clarity": 4,
+        "relevance": 5,
+        "structure": 4,
+        "confidence": 5
+      },
+      "improved_answer": "Same answer, adding: 'I owned content planning and analytics, working with a budget of around 15,000 rupees.'"
+    },
+    {
+      "id": 11,
+      "role": "Any",
+      "category": "Situational",
+      "difficulty": "hard",
+      "question": "You have two urgent tasks due at the same time. How do you prioritize?",
+      "candidate_answer": "I will just do whichever I like first and try the other later.",
+      "answer_quality": "weak",
+      "feedback": "This shows no prioritization method. Explain a framework: clarify deadlines and impact, check with stakeholders if needed, rank by urgency and importance, communicate early about any delay, and ask for help if required.",
+      "scores": {
+        "clarity": 2,
+        "relevance": 1,
+        "structure": 1,
+        "confidence": 2
+      },
+      "improved_answer": "I first clarify the deadline and business impact of each task. I rank them by urgency and importance, and if both are critical, I speak to my manager to confirm priorities. I then plan my time, keep stakeholders updated, and ask for support if I see a risk of missing a deadline."
+    },
+    {
+      "id": 12,
+      "role": "Any",
+      "category": "HR",
+      "difficulty": "easy",
+      "question": "Where do you see yourself in five years?",
+      "candidate_answer": "In five years I want to grow into a senior role where I can lead a small team. Over the next year or two I plan to master the core technologies here and take ownership of projects, and I'd like to mentor new joiners along the way.",
+      "answer_quality": "strong",
+      "feedback": "Ambitious but realistic, and it ties growth to the company's needs. Good answer. Keep your tone natural and confident when speaking.",
+      "scores": {
+        "clarity": 4,
+        "relevance": 5,
+        "structure": 4,
+        "confidence": 4
+      },
+      "improved_answer": "Same answer. Optionally mention one skill or certification you plan to earn."
+    },
+    {
+      "id": 13,
+      "role": "Software Engineer",
+      "category": "Technical",
+      "difficulty": "hard",
+      "question": "How would you design a URL shortener like bit.ly?",
+      "candidate_answer": "I would take the long URL, generate a unique short code using base62 encoding of an auto-increment ID, and store the mapping in a database. When a user opens the short link, the server looks up the code and redirects with HTTP 301. To scale, I'd add a cache like Redis for popular links and use a load balancer with multiple servers.",
+      "answer_quality": "average",
+      "feedback": "Solid core design: ID generation, storage, redirect and caching. Missing: clarifying requirements first (expected traffic, link expiry), handling collisions or ID generation across multiple servers, analytics, and 301 vs 302 trade-off. In system design, always start by asking clarifying questions.",
+      "scores": {
+        "clarity": 4,
+        "relevance": 4,
+        "structure": 3,
+        "confidence": 4
+      },
+      "improved_answer": "Start with requirements (e.g., 100M new URLs per month, read-heavy, optional expiry). Then cover API, ID generation (distributed counter or pre-generated key ranges), database choice, caching, redirect type, and failure handling."
+    },
+    {
+      "id": 14,
+      "role": "Frontend Developer",
+      "category": "Technical",
+      "difficulty": "easy",
+      "question": "What is the difference between let, const and var in JavaScript?",
+      "candidate_answer": "var is function scoped and can be redeclared. let is block scoped and can be reassigned. const is also block scoped but cannot be reassigned after it is set. Also var is hoisted and initialised as undefined, while let and const are hoisted but stay in the temporal dead zone until declared.",
+      "answer_quality": "strong",
+      "feedback": "Accurate and well organised. You covered scope, reassignment and hoisting. One refinement: clarify that const prevents reassignment, not mutation of objects. Mention which you prefer in modern code.",
+      "scores": {
+        "clarity": 5,
+        "relevance": 5,
+        "structure": 4,
+        "confidence": 4
+      },
+      "improved_answer": "Same answer, adding: 'Note that const objects and arrays can still be mutated. In modern code I default to const and use let only when I need to reassign, and I avoid var.'"
+    },
+    {
+      "id": 15,
+      "role": "Frontend Developer",
+      "category": "Technical",
+      "difficulty": "medium",
+      "question": "How would you improve the performance of a slow React application?",
+      "candidate_answer": "I would make the code faster and remove extra stuff. Maybe use a better computer also.",
+      "answer_quality": "weak",
+      "feedback": "This is too vague and shows no technical approach. Start by measuring (React Profiler, Lighthouse). Then name specific fixes: memoization with React.memo/useMemo/useCallback, code splitting and lazy loading, list virtualization, image optimisation, and avoiding unnecessary re-renders.",
+      "scores": {
+        "clarity": 1,
+        "relevance": 1,
+        "structure": 1,
+        "confidence": 2
+      },
+      "improved_answer": "I would first measure using React Profiler and Lighthouse to find the real bottleneck. Then I would reduce unnecessary re-renders with React.memo and useMemo, split the bundle with lazy loading, virtualise long lists, and compress images. I would re-measure after each change to confirm it helped."
+    },
+    {
+      "id": 16,
+      "role": "DevOps Engineer",
+      "category": "Technical",
+      "difficulty": "medium",
+      "question": "What is CI/CD and why is it important?",
+      "candidate_answer": "CI is continuous integration, where developers merge code often and automated builds and tests run on every change. CD is continuous delivery or deployment, where passing builds are automatically released. It matters because it catches bugs early, reduces manual errors and makes releases faster and more reliable.",
+      "answer_quality": "strong",
+      "feedback": "Clear definitions and good reasoning on the benefits. To stand out, name a tool you have used (for example GitHub Actions or Jenkins) and describe a pipeline you built.",
+      "scores": {
+        "clarity": 5,
+        "relevance": 5,
+        "structure": 4,
+        "confidence": 4
+      },
+      "improved_answer": "Same answer, adding: 'In my project I set up a GitHub Actions pipeline that ran tests, built a Docker image and deployed to staging on every merge, which cut our release time from hours to minutes.'"
+    },
+    {
+      "id": 17,
+      "role": "DevOps Engineer",
+      "category": "Situational",
+      "difficulty": "hard",
+      "question": "Production is down and customers are complaining. What do you do first?",
+      "candidate_answer": "I would restart all the servers and see if it works.",
+      "answer_quality": "weak",
+      "feedback": "Restarting everything blindly can destroy evidence and make things worse. Describe an incident process: acknowledge and communicate, check dashboards and recent deployments, roll back if a release caused it, mitigate first and find root cause later, and write a post-incident review.",
+      "scores": {
+        "clarity": 3,
+        "relevance": 2,
+        "structure": 1,
+        "confidence": 3
+      },
+      "improved_answer": "First I would acknowledge the incident and notify stakeholders. Then I'd check monitoring and recent deployments. If a release is the likely cause, I would roll back to restore service quickly. Once stable, I'd find the root cause from logs, and afterwards write a blameless post-mortem with actions to prevent a repeat."
+    },
+    {
+      "id": 18,
+      "role": "Data Scientist",
+      "category": "Technical",
+      "difficulty": "medium",
+      "question": "What is overfitting and how do you prevent it?",
+      "candidate_answer": "Overfitting is when a model learns the training data too well, including noise, so it performs well on training data but poorly on new data. To prevent it I use more data, cross-validation, regularisation like L1 or L2, simpler models, early stopping and dropout for neural networks.",
+      "answer_quality": "strong",
+      "feedback": "Correct definition and a good list of remedies. Add how you detect it (gap between training and validation scores) and a short real example.",
+      "scores": {
+        "clarity": 5,
+        "relevance": 5,
+        "structure": 4,
+        "confidence": 4
+      },
+      "improved_answer": "Same answer, adding: 'I detect it when training accuracy keeps rising but validation accuracy flattens or drops. In a churn model I built, adding L2 regularisation and pruning features closed that gap.'"
+    },
+    {
+      "id": 19,
+      "role": "Data Scientist",
+      "category": "Technical",
+      "difficulty": "medium",
+      "question": "How would you explain a machine learning model's result to a non-technical manager?",
+      "candidate_answer": "I would tell them the model uses gradient boosting with 200 trees and the AUC is 0.87 and the F1 score is good.",
+      "answer_quality": "average",
+      "feedback": "The facts are right but too technical for a manager. Translate results into business impact, use plain language and an analogy, and state limitations honestly. Lead with the conclusion, then support it.",
+      "scores": {
+        "clarity": 3,
+        "relevance": 3,
+        "structure": 3,
+        "confidence": 4
+      },
+      "improved_answer": "The model can correctly flag about 8 out of 10 customers who are likely to leave, so the retention team can focus on them first. It is not perfect, so we'd still review borderline cases. If we offer them a discount, we could save an estimated number of customers each month."
+    },
+    {
+      "id": 20,
+      "role": "Sales Executive",
+      "category": "Behavioral",
+      "difficulty": "medium",
+      "question": "Tell me about a time you failed to meet a sales target.",
+      "candidate_answer": "I never really fail targets. I always achieve them.",
+      "answer_quality": "weak",
+      "feedback": "Claiming you have never failed sounds unrealistic and avoids the question. Interviewers want honesty and learning. Use STAR: describe the situation, what went wrong, your actions to recover, and what you changed afterwards.",
+      "scores": {
+        "clarity": 3,
+        "relevance": 1,
+        "structure": 1,
+        "confidence": 3
+      },
+      "improved_answer": "In one quarter I reached only 80% of my target because I focused too much on large leads that were slow to close. I reviewed my pipeline with my manager, added more mid-sized prospects and set weekly follow-up goals. The next quarter I exceeded my target by 10%."
+    },
+    {
+      "id": 21,
+      "role": "Sales Executive",
+      "category": "Situational",
+      "difficulty": "medium",
+      "question": "A customer says your product is too expensive. How do you respond?",
+      "candidate_answer": "I would first ask what they are comparing it with and what matters most to them. Then I would show how the product saves them money or time over the long term, with a real example, and if possible offer a smaller package or flexible payment rather than just cutting the price.",
+      "answer_quality": "strong",
+      "feedback": "Good approach: you listen first, focus on value and offer alternatives instead of discounting immediately. Adding a quick example with numbers would make it more persuasive.",
+      "scores": {
+        "clarity": 5,
+        "relevance": 5,
+        "structure": 4,
+        "confidence": 4
+      },
+      "improved_answer": "Same answer, adding: 'For example, I once showed a client that our software saved them about 10 hours of staff time a week, which paid back the cost within three months.'"
+    },
+    {
+      "id": 22,
+      "role": "Accountant",
+      "category": "Technical",
+      "difficulty": "easy",
+      "question": "What is the difference between accounts payable and accounts receivable?",
+      "candidate_answer": "Accounts payable is the money a company owes to its suppliers and is a liability. Accounts receivable is the money customers owe to the company and is an asset. Managing both well keeps cash flow healthy.",
+      "answer_quality": "strong",
+      "feedback": "Correct and concise, with the liability and asset classification clearly stated. Mention one practical task you have done, such as reconciliation or invoice follow-up.",
+      "scores": {
+        "clarity": 5,
+        "relevance": 5,
+        "structure": 4,
+        "confidence": 4
+      },
+      "improved_answer": "Same answer, adding: 'During my internship I reconciled supplier invoices each month and followed up on overdue customer payments using an ageing report.'"
+    },
+    {
+      "id": 23,
+      "role": "Accountant",
+      "category": "Situational",
+      "difficulty": "hard",
+      "question": "Your manager asks you to adjust a figure in the report to make results look better. What do you do?",
+      "candidate_answer": "I would just do it because he is my boss and I don't want any problems.",
+      "answer_quality": "weak",
+      "feedback": "This is a serious red flag. Integrity is critical in finance. Politely decline to falsify data, explain the risks (legal and professional), suggest legitimate alternatives such as correct disclosure, and escalate to compliance or senior management if pressure continues.",
+      "scores": {
+        "clarity": 3,
+        "relevance": 1,
+        "structure": 1,
+        "confidence": 2
+      },
+      "improved_answer": "I would politely explain that I can't change figures without valid supporting evidence, because it could create legal and reputational risk. I would offer to review whether any legitimate adjustment applies and present the results accurately with context. If the pressure continued, I would escalate to the finance head or compliance."
+    },
+    {
+      "id": 24,
+      "role": "Customer Support Executive",
+      "category": "Situational",
+      "difficulty": "medium",
+      "question": "How would you handle an angry customer?",
+      "candidate_answer": "I would stay calm and let the customer finish speaking without interrupting. Then I would apologise sincerely, repeat the problem to confirm I understood, and offer a clear solution with a timeline. If I can't solve it, I would escalate and follow up so the customer knows it is handled.",
+      "answer_quality": "strong",
+      "feedback": "Excellent. You show empathy, active listening, ownership and follow-up. Add a short real example to prove you've done it.",
+      "scores": {
+        "clarity": 5,
+        "relevance": 5,
+        "structure": 5,
+        "confidence": 4
+      },
+      "improved_answer": "Same answer, adding: 'Once a customer received a damaged item. I apologised, arranged a free replacement within 48 hours and called after delivery. They later left a positive review.'"
+    },
+    {
+      "id": 25,
+      "role": "Customer Support Executive",
+      "category": "Behavioral",
+      "difficulty": "easy",
+      "question": "Why do you want to work in customer support?",
+      "candidate_answer": "Because I need a job and I heard support is easy.",
+      "answer_quality": "weak",
+      "feedback": "This answer shows no motivation and wrongly calls the role easy. Highlight genuine interests such as helping people, communication skills and problem solving, and link them to the company.",
+      "scores": {
+        "clarity": 3,
+        "relevance": 1,
+        "structure": 1,
+        "confidence": 2
+      },
+      "improved_answer": "I enjoy solving problems and I feel good when I make someone's day better. I have strong communication skills and stay patient under pressure. Support is also a great way to understand customers deeply, which I'd like to build on in this company."
+    },
+    {
+      "id": 26,
+      "role": "Project Manager",
+      "category": "Behavioral",
+      "difficulty": "medium",
+      "question": "Tell me about a project that was running late. What did you do?",
+      "candidate_answer": "A software release was two weeks behind because requirements kept changing. I reviewed the scope with the client, agreed on a fixed list of priority features, moved lower-priority items to a later phase, and added a weekly status review. We delivered the core release only three days late and the client was satisfied.",
+      "answer_quality": "strong",
+      "feedback": "Great STAR structure with a clear cause, action and result. Mention how you communicated the delay to stakeholders and one lesson you took from it.",
+      "scores": {
+        "clarity": 5,
+        "relevance": 5,
+        "structure": 5,
+        "confidence": 4
+      },
+      "improved_answer": "Same answer, adding: 'I informed stakeholders as soon as I saw the risk, and the lesson was to freeze scope with a formal change process from the very start.'"
+    },
+    {
+      "id": 27,
+      "role": "Project Manager",
+      "category": "Technical",
+      "difficulty": "medium",
+      "question": "What is the difference between Agile and Waterfall?",
+      "candidate_answer": "Waterfall is old and slow. Agile is new and fast. Agile is always better.",
+      "answer_quality": "weak",
+      "feedback": "This is oversimplified and incorrect. Explain that Waterfall is sequential with fixed phases and works for stable requirements, while Agile is iterative with short sprints and regular feedback, suited to changing requirements. Neither is always better.",
+      "scores": {
+        "clarity": 2,
+        "relevance": 2,
+        "structure": 1,
+        "confidence": 3
+      },
+      "improved_answer": "Waterfall moves through fixed phases one after another (requirements, design, build, test, release), which suits projects with stable requirements. Agile works in short iterations called sprints with continuous feedback, which suits projects where requirements change. The right choice depends on the project, and many teams use a mix."
+    },
+    {
+      "id": 28,
+      "role": "Mechanical Engineer",
+      "category": "Technical",
+      "difficulty": "medium",
+      "question": "What is the difference between stress and strain?",
+      "candidate_answer": "Stress is the internal force per unit area in a material, measured in pascals. Strain is the deformation per unit length, which is a ratio and has no units. Within the elastic limit, stress is proportional to strain, and the constant is the Young's modulus, as per Hooke's law.",
+      "answer_quality": "strong",
+      "feedback": "Correct, precise and linked to Hooke's law. Add a practical example, such as a steel rod under tension, to show applied understanding.",
+      "scores": {
+        "clarity": 5,
+        "relevance": 5,
+        "structure": 4,
+        "confidence": 4
+      },
+      "improved_answer": "Same answer, adding: 'For example, if a steel rod is pulled by a load, stress is load divided by cross-section area, and strain is the extension divided by original length.'"
+    },
+    {
+      "id": 29,
+      "role": "Teacher",
+      "category": "Situational",
+      "difficulty": "medium",
+      "question": "How would you handle a student who keeps disrupting the class?",
+      "candidate_answer": "I would shout at the student and send them out of the class.",
+      "answer_quality": "weak",
+      "feedback": "This is a harsh approach that can damage trust and doesn't solve the cause. Describe a positive discipline method: speak to the student privately to understand the reason, set clear expectations, use praise for good behaviour, involve parents or a counsellor if needed, and keep the lesson engaging.",
+      "scores": {
+        "clarity": 3,
+        "relevance": 2,
+        "structure": 1,
+        "confidence": 3
+      },
+      "improved_answer": "I would first calmly speak to the student privately to understand why they are disruptive, since it could be boredom or a personal issue. I would set clear class rules, give them a positive role, and reward good behaviour. If it continued, I would involve parents or the school counsellor."
+    },
+    {
+      "id": 30,
+      "role": "Teacher",
+      "category": "Behavioral",
+      "difficulty": "easy",
+      "question": "How do you make a difficult topic easy for students to understand?",
+      "candidate_answer": "I break the topic into small steps and start from what students already know. I use real-life examples, visuals or simple activities, and I check understanding with quick questions along the way. If many students are confused, I explain it again in a different way.",
+      "answer_quality": "strong",
+      "feedback": "A clear and practical teaching approach with good variety. Add a specific topic example so the interviewer can picture it.",
+      "scores": {
+        "clarity": 5,
+        "relevance": 5,
+        "structure": 4,
+        "confidence": 4
+      },
+      "improved_answer": "Same answer, adding: 'To teach fractions, I used pizza slices and then let students divide real chapatis in groups, and their test scores improved noticeably.'"
+    },
+    {
+      "id": 31,
+      "role": "HR Executive",
+      "category": "Situational",
+      "difficulty": "hard",
+      "question": "An employee complains privately about harassment by a senior colleague. What would you do?",
+      "candidate_answer": "I would listen carefully and assure the employee that the complaint will be taken seriously. I would document the details, follow the company's formal complaint policy, escalate to the internal committee, keep the matter confidential, and ensure the employee is protected from retaliation while the investigation is fair to both parties.",
+      "answer_quality": "strong",
+      "feedback": "Strong, professional and sensitive. You cover listening, documentation, policy, confidentiality and non-retaliation. Mention timelines and following up with the employee after the process.",
+      "scores": {
+        "clarity": 5,
+        "relevance": 5,
+        "structure": 4,
+        "confidence": 4
+      },
+      "improved_answer": "Same answer, adding: 'I would also keep the employee informed about progress within the policy timelines and check in afterwards to make sure they feel safe.'"
+    },
+    {
+      "id": 32,
+      "role": "Any",
+      "category": "Behavioral",
+      "difficulty": "medium",
+      "question": "Why should we hire you?",
+      "candidate_answer": "Because I need this job a lot and I will do anything. Please give me a chance.",
+      "answer_quality": "weak",
+      "feedback": "This focuses on your need, not on the value you bring. Match your top skills and achievements to the job requirements, and show enthusiasm for the company. Be confident rather than pleading.",
+      "scores": {
+        "clarity": 2,
+        "relevance": 1,
+        "structure": 1,
+        "confidence": 1
+      },
+      "improved_answer": "I believe I'm a strong fit because my skills in this area match what the role needs, and I have delivered results, such as completing a project ahead of schedule. I learn fast, work well in teams, and I'm excited to contribute to your goals."
+    },
+    {
+      "id": 33,
+      "role": "Any",
+      "category": "HR",
+      "difficulty": "easy",
+      "question": "Do you have any questions for us?",
+      "candidate_answer": "No, I don't have any questions.",
+      "answer_quality": "weak",
+      "feedback": "Saying no can make you seem uninterested. Prepare two or three thoughtful questions about the team, expectations for the first 90 days, growth opportunities or success measures. Avoid asking about salary or leave first.",
+      "scores": {
+        "clarity": 3,
+        "relevance": 2,
+        "structure": 1,
+        "confidence": 3
+      },
+      "improved_answer": "Yes, I'd like to know what success looks like in this role in the first three months, and what the biggest challenges the team is facing right now are. I'm also curious how the company supports learning and growth for new joiners."
+    }
+  ],
+  "real_time_feedback_examples": [
+    {
+      "note": "These show how feedback can be given WHILE the candidate is still answering (live speech or typing), not just at the end.",
+      "events": [
+        {
+          "trigger": "filler words detected (um, uh, like) more than 5 times in 30 seconds",
+          "live_feedback": "Try pausing silently instead of saying 'um'. A short pause sounds more confident."
+        },
+        {
+          "trigger": "speaking pace above 170 words per minute",
+          "live_feedback": "You're speaking fast. Slow down a little so your points land clearly."
+        },
+        {
+          "trigger": "answer longer than 2 minutes without a clear point",
+          "live_feedback": "Try to wrap up with your main takeaway. Keep answers around 60 to 90 seconds."
+        },
+        {
+          "trigger": "no example or number given after 45 seconds",
+          "live_feedback": "Add a specific example or result to make your answer more credible."
+        },
+        {
+          "trigger": "negative words about a past employer detected",
+          "live_feedback": "Reframe this positively: focus on what you learned and what you are looking for next."
+        }
+      ]
+    }
+  ]
+}

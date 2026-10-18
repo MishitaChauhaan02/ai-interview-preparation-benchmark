@@ -1,0 +1,4 @@
+model,prompt_approach,total_calls,successful_calls,failed_calls,success_rate_pct,median_latency_sec,p95_latency_sec,mean_prompt_tokens,mean_completion_tokens,mean_total_tokens,total_estimated_cost_usd,clarity_mae,clarity_exact_pct,clarity_within_one_pct,relevance_mae,relevance_exact_pct,relevance_within_one_pct,structure_mae,structure_exact_pct,structure_within_one_pct,confidence_mae,confidence_exact_pct,confidence_within_one_pct,overall_mae,overall_exact_pct,overall_within_one_pct
+gpt-4.1,rubric,5,5,0,100.0,2.985,3.031,704.4,289.4,993.8,0.01862,0.4,60.0,100.0,0.6,40.0,100.0,0.6,60.0,80.0,0.0,100.0,100.0,0.4,65.0,95.0
+gpt-4.1-mini,rubric,5,5,0,100.0,3.11,3.557,704.4,298.8,1003.2,0.0038,0.4,60.0,100.0,0.4,60.0,100.0,0.6,60.0,80.0,0.2,80.0,100.0,0.4,65.0,95.0
+gpt-4o-mini,rubric,5,5,0,100.0,3.357,3.668,704.4,268.6,973.0,0.00133,0.4,60.0,100.0,0.2,80.0,100.0,0.6,60.0,80.0,0.2,80.0,100.0,0.35,70.0,95.0
